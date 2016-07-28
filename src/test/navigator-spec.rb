@@ -7,7 +7,7 @@ include NAVIGATOR
 describe 'My behaviour' do
 
   it 'should do something' do
-    page = NAVIGATOR.goToWebsite(MAIN.new::WEBSITE)
-    expect(page).to be_empty
+    page = NAVIGATOR.goToWebsite(NAVIGATOR::WEBSITE)
+    expect(page).not_to be_nil
   end
 end
