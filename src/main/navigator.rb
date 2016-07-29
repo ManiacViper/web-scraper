@@ -11,9 +11,13 @@ module NAVIGATOR
   end
 
   def getPageCount(page)
-    allPaginationLinks = page.css("a[class='pagination_link']")
-    pageCount = allPaginationLinks[allPaginationLinks.length]
-    pageCount
+    paginateDiv = page.css("div[id='paginate']")
+    paginationLinksExceptCurrentPage = paginateDiv.css("a[class='pagination_link']")
+    maxPaginationLink = paginationLinksExceptCurrentPage[paginationLinksExceptCurrentPage.length - 1]
+    if (maxPaginationLink != nil)
+      maxPage = Integer(maxPaginationLink.text)
+    end
+    maxPage
   end
 
   def goToWebpage(webpage)
