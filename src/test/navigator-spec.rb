@@ -6,7 +6,7 @@ include NAVIGATOR
 
 describe 'Navigator' do
 
-  context "navigation for one page" do
+  context 'navigation for one page' do
     it 'should go to web page' do
       page = NAVIGATOR.goToWebpage(NAVIGATOR::FIRST_WEBPAGE)
       expect(page.css("title").text).to eq('WeGotTickets | Simple, honest ticketing')
