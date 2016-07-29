@@ -4,7 +4,7 @@ require_relative '../../src/main/navigator.rb'
 
 include NAVIGATOR
 
-describe 'My behaviour' do
+describe 'Navigator' do
 
   it 'should go to web page' do
     page = NAVIGATOR.goToWebpage(NAVIGATOR::FIRST_WEBPAGE)
