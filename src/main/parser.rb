@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
-require_relative 'eventDetails'
+require_relative 'EventDetails'
 
 class PARSER
 

@@ -15,7 +15,7 @@ describe 'Navigator' do
     it 'should get the last page number in the pagination search results' do
       page = NAVIGATOR.goToWebpage(NAVIGATOR::FIRST_WEBPAGE)
       pageCount = NAVIGATOR.getPageCount(page)
-      expect(pageCount).to eq(736) # not the best test as the max page can change
+      expect(pageCount).to eq(723) # not the best test as the last page can change
     end
     
   end
