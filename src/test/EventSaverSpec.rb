@@ -2,7 +2,7 @@ require 'rspec'
 require 'json'
 require_relative '../../src/main/Navigator.rb'
 require_relative '../../src/main/Parser.rb'
-require_relative '../../src/main/EventSaver.rb'
+require_relative '../../src/main/event/EventSaver.rb'
 
 include Navigator
 include EVENTSAVER
