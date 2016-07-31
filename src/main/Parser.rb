@@ -3,7 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 require_relative 'EventDetails'
 
-class PARSER
+class Parser
 
   attr_accessor :eventDivs
   @eventDivs

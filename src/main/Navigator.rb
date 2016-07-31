@@ -2,7 +2,7 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 
-module NAVIGATOR
+module Navigator
 
   FIRST_WEBPAGE = 'http://www.wegottickets.com/searchresults/adv'
   PAGINATE_WEB_LINK = 'http://www.wegottickets.com/searchresults/page/2/adv#paginate'
