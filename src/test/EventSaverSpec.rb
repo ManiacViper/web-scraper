@@ -34,6 +34,7 @@ describe 'EventSaver' do
   end
 
   after(:example) do
+    File.delete('../../events.json')
   end
 
 end
