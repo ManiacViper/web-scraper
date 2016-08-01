@@ -29,12 +29,11 @@ describe 'EventSaver' do
       expect(eventsFile).not_to be_nil
 
       eventsJsonMap = JSON.parse(eventsFile)
-      expect(eventsJsonMap[0]['69']['artist']).to eq('testing')
+      expect(eventsJsonMap[1]['70\'S & 80\'S DISCO AT THE RIVOLI BALLROOM']['artist']).to eq('DJ Kobayashi & aerialist cabaret by Kellie Sky')
     end
   end
 
   after(:example) do
-    File.delete('../../events.json')
   end
 
 end

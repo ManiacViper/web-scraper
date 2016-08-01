@@ -30,7 +30,24 @@ describe 'Parser' do
       @parser.parse
       expect(events.length).to eq(10)
       expect(@parser.event_details_list.length).to eq(10)
-      expect(@parser.event_details_list[0].event_name).to eq('69')
+    end
+
+    it 'should parse and return correct event details (except artist)' do
+      @parser.getEvents
+      @parser.parse
+      firstEvent = @parser.event_details_list[0]
+      expect(firstEvent.name).to eq('69')
+      expect(firstEvent.city).to eq('KEIGHLEY')
+      expect(firstEvent.venue).to eq('Exchange Arts Centre')
+      expect(firstEvent.date).to eq('Sat 30th Jul, 2016, 7:30am')
+      # expect(firstEvent.price).to eq('\\xA38.80')
+    end
+
+    it 'should parse and return correct event artist' do
+      @parser.getEvents
+      @parser.parse
+      secondEvent = @parser.event_details_list[1]
+      expect(secondEvent.artist).to eq('DJ Kobayashi & aerialist cabaret by Kellie Sky')
     end
   end
 

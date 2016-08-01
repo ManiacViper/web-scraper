@@ -4,8 +4,8 @@ require 'open-uri'
 
 class EVENTDETAILS
 
-  attr_accessor :event_name
-  @event_name
+  attr_accessor :name
+  @name
 
   attr_accessor :artist
   @artist
@@ -22,8 +22,8 @@ class EVENTDETAILS
   attr_accessor :price
   @price
 
-  def initialize(event_name, artist, city, venue, date, price)
-    @event_name = event_name
+  def initialize(name, artist, city, venue, date, price)
+    @name = name
     @artist = artist
     @city = city
     @venue = venue

@@ -18,7 +18,7 @@ describe 'Navigator' do
       allow_any_instance_of(Navigator).to receive(:goToWebpage).and_return(testPage)
       page = Navigator.goToWebpage(Navigator::FIRST_WEBPAGE)
       pageCount = Navigator.getPageCount(page)
-      expect(pageCount).to eq(723) # not the best test as the last page can change
+      expect(pageCount).to eq(723)
     end
     
   end

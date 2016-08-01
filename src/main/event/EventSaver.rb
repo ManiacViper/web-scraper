@@ -10,16 +10,21 @@ module EVENTSAVER
 
   def saveEvents(event_details_list)
     temp_map_list = Array.new
+    tempMap = Hash.new
     event_details_list.each { |event_details|
       tempMap = {
-          event_details.event_name => {
-              'artist' => 'testing'
+          event_details.name => {
+              :artist => event_details.artist,
+              :city => event_details.city,
+              :venue => event_details.venue,
+              :date => event_details.date
+              # :price => event_details.price
           }
       }
       temp_map_list << tempMap
     }
-    if (temp_map_list != nil)
-      File.open("../../events.json","w") do |file|
+    if (temp_map_list != nil and temp_map_list.length > 0)
+      File.open('../../events.json','w') do |file|
         file.write(temp_map_list.to_json)
       end
     else
