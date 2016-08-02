@@ -5,7 +5,7 @@ require_relative '../../src/main/Parser.rb'
 require_relative '../../src/main/event/EventSaver.rb'
 
 include Navigator
-include EVENTSAVER
+include EventSaver
 
 describe 'EventSaver' do
 
@@ -24,7 +24,7 @@ describe 'EventSaver' do
 
   context 'saves events from first page' do
     it 'should save events' do
-      EVENTSAVER.saveEvents(@parser.event_details_list)
+      EventSaver.saveEvents(@parser.event_details_list)
       eventsFile = File.read('../../events.json')
       expect(eventsFile).not_to be_nil
 

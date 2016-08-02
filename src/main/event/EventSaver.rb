@@ -3,7 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'json'
 
-module EVENTSAVER
+module EventSaver
 
   def initialize()
   end
