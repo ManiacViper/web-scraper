@@ -6,9 +6,6 @@ require_relative 'event/EventSaver.rb'
 include Navigator
 include EventSaver
 
-# cant test this on the command line as there is a version compatibility error for
-# ruby 2.3.1 and nokogiri gem
-
 class MAIN
 
   def initialize
