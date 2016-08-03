@@ -17,6 +17,9 @@ class MAIN
     @parser.getEvents
     @parser.parse
     EventSaver.saveEvents(@parser.event_details_list)
+	puts 'Events saved'
   end
 
 end
+
+MAIN.new

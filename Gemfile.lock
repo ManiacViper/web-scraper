@@ -27,6 +27,3 @@ PLATFORMS
 DEPENDENCIES
   nokogiri
   rspec
-
-BUNDLED WITH
-   1.12.5
